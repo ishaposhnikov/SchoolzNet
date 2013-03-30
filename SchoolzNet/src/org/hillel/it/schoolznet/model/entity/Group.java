@@ -1,6 +1,8 @@
 package org.hillel.it.schoolznet.model.entity;
 
-public class Group {
+import java.io.Serializable;
+
+public class Group implements Serializable{
 	private int id;
 	private String name;
 	private String city;

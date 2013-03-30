@@ -1,6 +1,9 @@
 package org.hillel.it.schoolznet.model.entity;
 
-public class User {
+import java.io.Serializable;
+import java.util.Date;
+
+public class User implements Serializable {
 	private int id;
 	private String firstName;
 	private String secondName;
@@ -13,6 +16,7 @@ public class User {
 	private String employment;
 	private String status;
 	private String city;
+	private Date dateOfBirth;
 
 	public User() {
 	}
@@ -122,6 +126,14 @@ public class User {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
 }

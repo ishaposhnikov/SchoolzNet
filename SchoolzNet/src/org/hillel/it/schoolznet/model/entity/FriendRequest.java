@@ -1,8 +1,9 @@
 package org.hillel.it.schoolznet.model.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class FriendRequest {
+public class FriendRequest implements Serializable {
 	private int id;
 	private int sourceId;
 	private int destinationId;

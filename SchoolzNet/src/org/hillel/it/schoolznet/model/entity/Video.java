@@ -1,6 +1,8 @@
 package org.hillel.it.schoolznet.model.entity;
 
-public class Video {
+import java.io.Serializable;
+
+public class Video implements Serializable {
 	private int id;
 	private String link;
 

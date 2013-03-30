@@ -1,6 +1,8 @@
 package org.hillel.it.schoolznet.model.entity;
 
-public class Album {
+import java.io.Serializable;
+
+public class Album implements Serializable {
 	private int id;
 	private int name;
 	private int multimediaCount;
@@ -48,5 +50,7 @@ public class Album {
 	public void setLink(String link) {
 		this.link = link;
 	}
+
+
 
 }

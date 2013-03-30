@@ -1,6 +1,8 @@
 package org.hillel.it.schoolznet.model.entity;
 
-public class Picture {
+import java.io.Serializable;
+
+public class Picture implements Serializable {
 	private int id;
 	private String image;
 

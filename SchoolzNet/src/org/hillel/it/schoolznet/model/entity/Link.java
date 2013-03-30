@@ -1,6 +1,8 @@
 package org.hillel.it.schoolznet.model.entity;
 
-public class Link {
+import java.io.Serializable;
+
+public class Link implements Serializable {
 	private int id;
 	private String link;
 

@@ -1,8 +1,9 @@
 package org.hillel.it.schoolznet.model.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Message {
+public class Message implements Serializable {
 	private int id;
 	private String title;
 	private String text;
