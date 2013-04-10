@@ -3,7 +3,11 @@ package org.hillel.it.schoolznet.model.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Message implements Serializable {
+public class Message extends Entity implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4396542563594490324L;
 	private int id;
 	private String title;
 	private String text;

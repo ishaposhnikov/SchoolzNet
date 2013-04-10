@@ -2,7 +2,11 @@ package org.hillel.it.schoolznet.model.entity;
 
 import java.io.Serializable;
 
-public class Video implements Serializable {
+public class Video extends Entity implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8393989375725804058L;
 	private int id;
 	private String link;
 

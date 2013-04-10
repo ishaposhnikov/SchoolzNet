@@ -2,7 +2,11 @@ package org.hillel.it.schoolznet.model.entity;
 
 import java.io.Serializable;
 
-public class Group implements Serializable{
+public class Group extends Entity implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3108059975195005771L;
 	private int id;
 	private String name;
 	private String city;

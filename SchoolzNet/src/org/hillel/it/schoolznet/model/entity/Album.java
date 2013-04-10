@@ -2,8 +2,11 @@ package org.hillel.it.schoolznet.model.entity;
 
 import java.io.Serializable;
 
-public class Album implements Serializable {
-	private int id;
+public class Album extends Entity implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7759616943006038721L;
 	private int name;
 	private int multimediaCount;
 	private String link;
