@@ -7,7 +7,7 @@ import java.util.List;
 public interface UserDAO {
 	public User login(String email, String password);
 
-	public boolean register(String firstName, String secondName,
+	public boolean registeration(String firstName, String secondName,
 			String lastName, Date dateOfBirth, boolean sex, String email,
 			String password, String employment, String picture);
 

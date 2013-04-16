@@ -1,6 +1,7 @@
 package org.hillel.it.schoolznet.model.entity;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class User extends Entity implements Serializable {
@@ -8,7 +9,6 @@ public class User extends Entity implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 8146287963790784430L;
-	private int id;
 	private String firstName;
 	private String secondName;
 	private String lastName;
@@ -36,12 +36,8 @@ public class User extends Entity implements Serializable {
 
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public EntityType getEntityType() {
+		return EntityType.USER;
 	}
 
 	public String getFirstName() {
@@ -138,6 +134,34 @@ public class User extends Entity implements Serializable {
 
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getFormattedDateOfBirth() {
+		if (dateOfBirth == null)
+			return "";
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+		return formatter.format(dateOfBirth);
+	}
+
+	public String getFormattedDayOfBirth() {
+		if (dateOfBirth == null)
+			return "";
+		SimpleDateFormat formatter = new SimpleDateFormat("dd");
+		return formatter.format(dateOfBirth);
+	}
+
+	public String getFormattedMonthOfBirth() {
+		if (dateOfBirth == null)
+			return "";
+		SimpleDateFormat formatter = new SimpleDateFormat("MMM");
+		return formatter.format(dateOfBirth);
+	}
+
+	public String getFormattedYearOfBirth() {
+		if (dateOfBirth == null)
+			return "";
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy");
+		return formatter.format(dateOfBirth);
 	}
 
 }

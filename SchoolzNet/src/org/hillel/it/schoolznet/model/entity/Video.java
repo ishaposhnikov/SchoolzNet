@@ -1,35 +1,33 @@
 package org.hillel.it.schoolznet.model.entity;
 
 import java.io.Serializable;
+import java.net.URL;
 
 public class Video extends Entity implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -8393989375725804058L;
-	private int id;
-	private String link;
+
+	private URL url;
 
 	public Video() {
 	}
 
-	public Video(int id, String link) {
+	public Video(int id, URL url) {
 
 	}
 
-	public int getId() {
-		return id;
+	public EntityType getEntityType() {
+		return EntityType.VIDEO;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public URL getUrl() {
+		return url;
 	}
 
-	public String getLink() {
-		return link;
+	public void setUrl(URL url) {
+		this.url = url;
 	}
 
-	public void setLink(String link) {
-		this.link = link;
-	}
 }

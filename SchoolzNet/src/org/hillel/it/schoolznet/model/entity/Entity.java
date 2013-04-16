@@ -2,7 +2,7 @@ package org.hillel.it.schoolznet.model.entity;
 
 import java.util.Date;
 
-public class Entity {
+public abstract class Entity {
 
 	protected int id;
 	protected Date dateCreated;

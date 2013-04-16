@@ -1,10 +1,12 @@
 package org.hillel.it.schoolznet.model.dao;
 
+import org.hillel.it.schoolznet.model.entity.FriendRequest;
+
 public interface FriendRequestDAO {
-	public boolean createFriendRequest(Integer sourceId, Integer destinationId);
+	public boolean createFriendRequest(FriendRequest friendRequest);
 
-	public boolean acceptFriendRequest(Integer sourceId, Integer destinationId);
+	public boolean acceptFriendRequest(FriendRequest friendRequest);
 
-	public boolean declineFriendRequest(Integer sourceId, Integer destinationId);
+	public boolean declineFriendRequest(FriendRequest friendRequest);
 
 }

@@ -1,14 +1,14 @@
 package org.hillel.it.schoolznet.model.entity;
 
 import java.io.Serializable;
+import java.net.URL;
 
 public class Picture extends Entity implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 2707298786246870933L;
-	private int id;
-	private String image;
+	private URL url;
 
 	public Picture() {
 	}
@@ -16,20 +16,16 @@ public class Picture extends Entity implements Serializable {
 	public Picture(int id, String image) {
 	}
 
-	public int getId() {
-		return id;
+	public EntityType getEntityType() {
+		return EntityType.PICTURE;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public URL getUrl() {
+		return url;
 	}
 
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
+	public void setUrl(URL url) {
+		this.url = url;
 	}
 
 }

@@ -5,8 +5,7 @@ import java.util.List;
 
 public interface MessageDAO {
 
-	public boolean createMessage(String title, String text, Integer sourceId,
-			Integer destinationId, String picture, String video, String link);
+	public boolean createMessage(Message message);
 
 	public List<Message> topTenFor(Integer personId);
 

@@ -1,6 +1,7 @@
 package org.hillel.it.schoolznet.model.entity;
 
 import java.io.Serializable;
+import java.net.URL;
 
 public class Album extends Entity implements Serializable {
 	/**
@@ -9,25 +10,21 @@ public class Album extends Entity implements Serializable {
 	private static final long serialVersionUID = 7759616943006038721L;
 	private int name;
 	private int multimediaCount;
-	private String link;
+	private URL url;
 
 	public Album() {
 
 	}
 
-	public Album(int id, int name, int multimediaCount, String link) {
+	public Album(int id, int name, int multimediaCount, URL url) {
 		this.id = id;
 		this.name = name;
 		this.multimediaCount = multimediaCount;
-		this.link = link;
+		this.url = url;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public EntityType getEntityType() {
+		return EntityType.ALBUM;
 	}
 
 	public int getName() {
@@ -46,14 +43,12 @@ public class Album extends Entity implements Serializable {
 		this.multimediaCount = multimediaCount;
 	}
 
-	public String getLink() {
-		return link;
+	public URL getUrl() {
+		return url;
 	}
 
-	public void setLink(String link) {
-		this.link = link;
+	public void setUrl(URL url) {
+		this.url = url;
 	}
-
-
 
 }

@@ -8,7 +8,6 @@ public class Message extends Entity implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 4396542563594490324L;
-	private int id;
 	private String title;
 	private String text;
 	private Date date;
@@ -27,12 +26,8 @@ public class Message extends Entity implements Serializable {
 		this.destinationId = destinationId;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public EntityType getEntityType() {
+		return EntityType.MESSAGE;
 	}
 
 	public String getTitle() {
